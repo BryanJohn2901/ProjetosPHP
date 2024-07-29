@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+:root {
+    --cor-padrao-site: #fff;
+    --cor-link-topo: #fff;
+    --cor-font-escura: #000;
+    --cor-botao-pesquisa-top: #ff5361;
+    --cor-hover-btn: #96045e;
+    --cor-font-sub-titulo: #333;
+    --cor-hover-ganhar-dinheiro: #05af2a;
+    --cor-topo-celular: #000;
+    --borda-busca-rodape-celular: #ddd;
+}
+
+.destaque {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/banner-ms.png');
+    background-position: center;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+}
+
+nav .menu-outline {
+    display: none;
+}
+
+.logo {
+    width: 140px;
+    cursor: pointer;
+}
+
+.nav-links li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--cor-link-topo);
+}
+
+.active {
+    position: relative;
+}
+
+.active::after {
+    content: '';
+    background-color: var(--cor-link-topo);
+    height: 2px;
+    width: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -12px;
+    border-radius: 2px;
+}
+
+.cadastro-btn {
+    background: var(--cor-link-topo);
+    color: var(--cor-font-escura);
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.cadastro-btn:hover {
+    background-color: var(--cor-botao-pesquisa-top);
+    color: var(--cor-link-topo);
+}
+
+.container {
+    padding: 0 7%;
+}
+
+.destaque h1 {
+    font-size: 4vh;
+    font-weight: 500;
+    text-align: center;
+    color: var(--cor-link-topo);
+    padding-top: 20%;
+}
+
+.busca-site {
+    background-color: var(--cor-link-topo);
+    width: 70%;
+    margin: 30px auto;
+    padding: 6px 10px 6px 30px;
+    border-radius: 50px;
+}
+
+.local-input {
+    flex: 1;
+}
+
+.busca-site form label {
+    font-weight: 500;
+}
+
+.busca-site form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.busca-site form input {
+    display: block;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.busca-site form button {
+    background-color: var(--cor-botao-pesquisa-top);
+    width: 55px;
+    height: 55px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10em;
+}
+
+.busca-site form button img {
+    width: 15px;
+    margin-top: 5px;
+}
+
+.sub-titulo {
+    margin: 50px 0 20px;
+    font-size: 2.2vh;
+    font-weight: 500;
+    color: var(--cor-font-sub-titulo);
+}
+
+.exclusivos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.exclusivos div img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.exclusivos div {
+    position: relative;
+}
+
+.exclusivos div span {
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    text-align: center;
+    color: var(--cor-link-topo);
+    transform: translate(-50%, -50%);
+}
+
+.locais-quentes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.locais-quentes div img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.locais-quentes h3 {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.cta {
+    margin: 80px 0;
+    background-image: linear-gradient(to right, #3f2321, transparent), url('../img/banner-2.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 5%;
+    color: var(--cor-link-topo);
+}
+
+.cta h3 {
+    font-size: 4vw;
+    font-weight: 500;
+    line-height: 5.3vw;
+}
+
+.cta p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: var(--cor-botao-pesquisa-top);
+    color: var(--cor-link-topo);
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: background-color ease-in-out .5s;
+}
+
+.cta-btn:hover {
+    background-color: var(--cor-hover-ganhar-dinheiro);
+}
+
+.stories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.stories div img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.stories div {
+    position: relative;
+    text-align: center;
+}
+
+.stories h3 {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: var(--cor-link-topo);
+    transform: translate(-50%, -50%);
+}
+
+.ganhar-btn {
+    display: block;
+    width: 80%;
+    max-width: 350px;
+    color: var(--cor-link-topo);
+    background-color: var(--cor-botao-pesquisa-top);
+    text-align: center;
+    text-decoration: none;
+    margin: 60px auto;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 20px;
+}
+
+.ganhar-btn:hover {
+    background-color: var(--cor-hover-ganhar-dinheiro);
+}
+
+.sobre-nos {
+    text-align: center;
+    font-size: 17px;
+    margin: 80px 0;
+    color: var(--cor-font-escura);
+}
+
+.sobre-nos h2 {
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.sobre-nos p {
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+.rodape {
+    margin: 80px 0 10px;
+    text-align: center;
+}
+
+.rodape ion-icon {
+    font-size: 22px;
+    color: var(--cor-botao-pesquisa-top);
+    margin: 0 10px;
+}
+
+.rodape p {
+    padding-bottom: 15px;
+}
+
+/* RESPONSIVIDADE - HOME */
+@media only screen and (max-width:700px) {
+
+    .logo {
+        position: fixed;
+        top: 4%;
+        left: 7%;
+    }
+
+    nav {
+        display: inline-block;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        padding: 100px 7% 0;
+        background-color: var(--cor-font-escura);
+        text-align: right;
+        max-height: 100px;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+
+    nav .nav-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .cadastro-btn {
+        margin: 15px 0 30px;
+        display: inline-block;
+    }
+
+    nav .menu-outline {
+        display: block !important;
+        position: fixed;
+        top: 4%;
+        right: 7%;
+        font-size: 28px;
+        color: var(--cor-link-topo);
+    }
+
+    .active::after {
+        left: -40px;
+        transform: translate(0, 50%);
+        bottom: 50%;
+    }
+
+    .escondemenu {
+        max-height: 300px;
+    }
+
+    .destaque h1 {
+        padding-top: 200px;
+        font-size: 7vw;
+    }
+
+    .busca-site {
+        width: 90%;
+        margin: 30px auto;
+        padding: 20px 10px 30px;
+        border-radius: 5px;
+        position: relative;
+    }
+
+    .busca-site form{
+        display: block;
+    }
+
+    .busca-site form input{
+        width: 100%;
+        border-bottom: 1px solid var(--borda-busca-rodape-celular);
+        margin-bottom: 20px;
+        margin-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .busca-site form button{
+        position: absolute;
+        bottom: -10%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .sub-titulo{
+        font-size: 2vh;
+    }
+
+    .cta{
+        padding: 15px 5%;
+    }
+
+    .cta h3{
+        font-size: 6vw;
+        line-height: 1.5em;
+    }
+
+    .cta p{
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+
+    .cta-btn{
+        font-size: 14px;
+        padding: 6px;
+        margin-top: 10px;
+        border-radius: 4px;
+    }
+
+    .stories{
+        font-size: 22px;
+    }
+
+    .stories h3{
+        font-weight: 400;
+    }
+
+    .sobre-nos p{
+        font-size: 14px;
+        line-height: 1.5em;
+    }
+}
+
+/* LISTAGEM DE IMÓVEIS */
